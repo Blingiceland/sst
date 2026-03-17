@@ -5,34 +5,42 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-    /* Colors - Dark, atmospheric, concert-venue feel */
-    --color-bg-primary: #0a0a0f;
-    --color-bg-secondary: #12121a;
-    --color-bg-tertiary: #1a1a25;
-    --color-bg-card: #16161f;
-    --color-bg-card-hover: #1e1e2a;
+    /* Colors - Bright, warm, vibrant — full of life! */
+    --color-bg-primary: #FFFAF5;
+    --color-bg-secondary: #FFF5EE;
+    --color-bg-tertiary: #F0EBE3;
+    --color-bg-card: #FFFFFF;
+    --color-bg-card-hover: #FFF8F2;
 
-    /* Accent - Warm amber/gold like stage lighting */
-    --color-accent: #e8a838;
-    --color-accent-hover: #f0b848;
-    --color-accent-glow: rgba(232, 168, 56, 0.15);
-    --color-accent-subtle: rgba(232, 168, 56, 0.08);
+    /* Primary Accent - Vibrant coral/red — energy & passion */
+    --color-accent: #E8594F;
+    --color-accent-hover: #D94840;
+    --color-accent-glow: rgba(232, 89, 79, 0.15);
+    --color-accent-subtle: rgba(232, 89, 79, 0.07);
+
+    /* Secondary - Deep indigo — trust & depth */
+    --color-secondary: #4338CA;
+    --color-secondary-subtle: rgba(67, 56, 202, 0.08);
+
+    /* Tertiary - Teal — freshness & growth */
+    --color-tertiary: #0D9488;
+    --color-tertiary-subtle: rgba(13, 148, 136, 0.08);
 
     /* Text */
-    --color-text-primary: #f0ece4;
-    --color-text-secondary: #a0a0b0;
-    --color-text-muted: #6a6a7a;
-    --color-text-accent: #e8a838;
+    --color-text-primary: #1E1B2E;
+    --color-text-secondary: #5A5670;
+    --color-text-muted: #9490A8;
+    --color-text-accent: #E8594F;
 
     /* Borders */
-    --color-border: rgba(255, 255, 255, 0.06);
-    --color-border-hover: rgba(255, 255, 255, 0.12);
-    --color-border-accent: rgba(232, 168, 56, 0.3);
+    --color-border: rgba(30, 27, 46, 0.08);
+    --color-border-hover: rgba(30, 27, 46, 0.15);
+    --color-border-accent: rgba(232, 89, 79, 0.25);
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, #0a0a0f 0%, #1a1020 50%, #0a0a0f 100%);
-    --gradient-card: linear-gradient(135deg, var(--color-bg-card) 0%, rgba(30, 25, 40, 0.8) 100%);
-    --gradient-accent: linear-gradient(135deg, #e8a838 0%, #d4902a 100%);
+    --gradient-hero: linear-gradient(135deg, #1E1B2E 0%, #2D2556 40%, #3B2E6E 100%);
+    --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #FFFAF5 100%);
+    --gradient-accent: linear-gradient(135deg, #E8594F 0%, #F07A52 100%);
 
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -63,10 +71,10 @@
     --transition-spring: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 30px rgba(232, 168, 56, 0.15);
+    --shadow-sm: 0 2px 8px rgba(30, 27, 46, 0.06);
+    --shadow-md: 0 4px 16px rgba(30, 27, 46, 0.08);
+    --shadow-lg: 0 8px 32px rgba(30, 27, 46, 0.12);
+    --shadow-glow: 0 4px 20px rgba(232, 89, 79, 0.2);
 }
 
 /* --- Reset & Base --- */
@@ -94,7 +102,7 @@ body {
 }
 
 ::selection {
-    background: rgba(232, 168, 56, 0.3);
+    background: rgba(232, 89, 79, 0.2);
     color: var(--color-text-primary);
 }
 
@@ -171,7 +179,7 @@ a:hover {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 10, 15, 0.8);
+    background: rgba(255, 250, 245, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
@@ -179,7 +187,7 @@ a:hover {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(255, 250, 245, 0.97);
     box-shadow: var(--shadow-md);
 }
 
@@ -212,7 +220,7 @@ a:hover {
     justify-content: center;
     background: var(--gradient-accent);
     border-radius: var(--radius-md);
-    color: var(--color-bg-primary);
+    color: #FFFFFF;
 }
 
 .logo-text {
@@ -242,12 +250,12 @@ a:hover {
 
 .nav-link:hover {
     color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(30, 27, 46, 0.05);
 }
 
 .nav-link.nav-cta {
     background: var(--gradient-accent);
-    color: var(--color-bg-primary);
+    color: #FFFFFF;
     font-weight: 600;
     padding: var(--space-sm) var(--space-lg);
     border-radius: var(--radius-full);
@@ -257,7 +265,7 @@ a:hover {
     opacity: 0.9;
     transform: translateY(-1px);
     box-shadow: var(--shadow-glow);
-    color: var(--color-bg-primary);
+    color: #FFFFFF;
 }
 
 /* Mobile nav toggle */
@@ -322,9 +330,9 @@ a:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(ellipse at 30% 50%, rgba(232, 168, 56, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 30%, rgba(100, 60, 150, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 80%, rgba(232, 168, 56, 0.04) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 30% 50%, rgba(232, 89, 79, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(67, 56, 202, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(13, 148, 136, 0.08) 0%, transparent 50%);
     animation: heroGlow 15s ease-in-out infinite;
 }
 
@@ -347,6 +355,7 @@ a:hover {
     text-align: center;
     padding: var(--space-3xl) var(--space-xl);
     max-width: 900px;
+    color: #FFFFFF;
 }
 
 .hero-badge {
@@ -397,7 +406,7 @@ a:hover {
 
 .hero-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: var(--color-text-secondary);
+    color: rgba(255, 255, 255, 0.7);
     max-width: 600px;
     margin: 0 auto var(--space-2xl);
     line-height: 1.6;
@@ -431,7 +440,7 @@ a:hover {
 
 .btn-primary {
     background: var(--gradient-accent);
-    color: var(--color-bg-primary);
+    color: #FFFFFF;
 }
 
 .btn-primary:hover {
@@ -448,8 +457,8 @@ a:hover {
 
 .btn-secondary:hover {
     border-color: var(--color-accent);
-    color: var(--color-accent);
-    background: var(--color-accent-subtle);
+    color: #FFFFFF;
+    background: var(--color-accent);
     transform: translateY(-2px);
 }
 
@@ -481,7 +490,7 @@ a:hover {
 
 .stat-label {
     font-size: 0.8rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: var(--space-xs);
@@ -501,7 +510,7 @@ a:hover {
 .scroll-indicator {
     width: 24px;
     height: 40px;
-    border: 2px solid var(--color-border-hover);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     position: relative;
 }
@@ -610,14 +619,19 @@ a:hover {
     right: 0;
     height: 3px;
     background: var(--gradient-accent);
-    opacity: 0;
+    opacity: 1;
     transition: opacity var(--transition-base);
 }
+
+.goal-card:nth-child(1)::before { background: linear-gradient(135deg, #E8594F, #F07A52); }
+.goal-card:nth-child(2)::before { background: linear-gradient(135deg, #4338CA, #6366F1); }
+.goal-card:nth-child(3)::before { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+.goal-card:nth-child(4)::before { background: linear-gradient(135deg, #D97706, #F59E0B); }
 
 .goal-card:hover {
     transform: translateY(-4px);
     border-color: var(--color-border-accent);
-    box-shadow: var(--shadow-lg), 0 0 40px rgba(232, 168, 56, 0.05);
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(232, 89, 79, 0.08);
 }
 
 .goal-card:hover::before {
@@ -628,7 +642,7 @@ a:hover {
     font-family: var(--font-display);
     font-size: 3rem;
     font-weight: 900;
-    color: rgba(232, 168, 56, 0.1);
+    color: rgba(67, 56, 202, 0.12);
     position: absolute;
     top: var(--space-lg);
     right: var(--space-xl);
@@ -714,8 +728,8 @@ a:hover {
 }
 
 .stake-item:hover {
-    border-color: rgba(220, 60, 60, 0.3);
-    background: rgba(220, 60, 60, 0.05);
+    border-color: rgba(232, 89, 79, 0.3);
+    background: rgba(232, 89, 79, 0.04);
     transform: translateY(-2px);
 }
 
@@ -831,7 +845,7 @@ a:hover {
     background: var(--color-accent-subtle);
     color: var(--color-accent);
     border-radius: var(--radius-full);
-    border: 1px solid rgba(232, 168, 56, 0.15);
+    border: 1px solid rgba(232, 89, 79, 0.15);
 }
 
 .venues-cta {
@@ -891,7 +905,7 @@ a:hover {
 
 .filter-btn.active {
     background: var(--gradient-accent);
-    color: var(--color-bg-primary);
+    color: #FFFFFF;
     border-color: var(--color-accent);
     font-weight: 600;
 }
@@ -1024,7 +1038,7 @@ a:hover {
     justify-content: center;
     font-size: 3rem;
     color: var(--color-text-muted);
-    background: linear-gradient(135deg, var(--color-bg-tertiary), rgba(232, 168, 56, 0.05));
+    background: linear-gradient(135deg, var(--color-bg-tertiary), rgba(232, 89, 79, 0.06));
 }
 
 .news-body {
@@ -1202,7 +1216,7 @@ a:hover {
 .form-group select {
     cursor: pointer;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a0a0b0' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239490A8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     padding-right: 2.5rem;
@@ -1217,9 +1231,10 @@ a:hover {
    FOOTER
    ========================================== */
 .footer {
-    background: var(--color-bg-primary);
-    border-top: 1px solid var(--color-border);
+    background: #1E1B2E;
+    border-top: none;
     padding: var(--space-3xl) 0 var(--space-xl);
+    color: #e0dce8;
 }
 
 .footer-grid {
@@ -1229,12 +1244,20 @@ a:hover {
     margin-bottom: var(--space-2xl);
 }
 
+.footer-brand .logo-footer .logo-text {
+    color: #FFFFFF;
+}
+
+.footer-brand .logo-footer .logo-icon {
+    background: rgba(232, 89, 79, 0.9);
+}
+
 .footer-brand .logo-footer {
     margin-bottom: var(--space-md);
 }
 
 .footer-brand p {
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.9rem;
     line-height: 1.6;
     max-width: 300px;
@@ -1245,7 +1268,7 @@ a:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-text-primary);
+    color: #FFFFFF;
     margin-bottom: var(--space-lg);
 }
 
@@ -1258,7 +1281,7 @@ a:hover {
 
 .footer-links a {
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.5);
     transition: color var(--transition-fast);
 }
 
@@ -1267,14 +1290,14 @@ a:hover {
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: var(--space-xl);
     text-align: center;
 }
 
 .footer-bottom p {
     font-size: 0.8rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.4);
 }
 
 /* ==========================================
@@ -1304,7 +1327,7 @@ a:hover {
         top: 70px;
         left: 0;
         right: 0;
-        background: rgba(10, 10, 15, 0.98);
+        background: rgba(255, 250, 245, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: var(--space-xl);
